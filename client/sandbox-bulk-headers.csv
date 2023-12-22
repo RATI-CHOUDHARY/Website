@@ -1,0 +1,3 @@
+country_code,account_type,primary_email_alias,password,first_name,last_name,ppBalance,addBank,ccType,payment_card
+US,BUSINESS,bulk-sb-1@businesses.example.com,J0nhD0!j,John,Doe,10031,Y,VISA,PAYPAL
+
