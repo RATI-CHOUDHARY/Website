@@ -6,18 +6,20 @@ const Cart = ({cart,setCart,handleChange}) => {
   const[price,setPrice]=useState(0);
   const [success,setSuccess]=useState(false);
   const [errormsg,setErromsg]=useState('');
-const [orderId,setOrderId]=useState(false);
+// const [orderId,setOrderId]=useState(false);
   const handleprice=()=>{
     let ans=0;
-    cart.map((item)=>{
+    cart.map((item)=>(
         ans+=item.amount*item.price
-    })
+    ))
     setPrice(ans);
   }
   const remove=(id)=>{
     const arr=cart.filter((item)=>item.id!==id)
     setCart(arr)
   }
+  console.log(success)
+  console.log(errormsg)
   useEffect(()=>{
     handleprice()
   })
@@ -41,7 +43,7 @@ return actions.order.create({
   } */
   const onApprove=(data,actions)=>{
 return actions.order.capture().then(function(details){
-  const {payer}=details
+  // const {payer}=details
   setSuccess(true)
 })
   }
@@ -54,7 +56,7 @@ return (
             cart?.map((item)=>(
                 <div className="cart_box" key={item.id}>
                     <div className="cart_img">
-                        <img src={item.img} />
+                        <img alt="n" src={item.img} />
                         <p>{item.title}</p>
                     </div>
                     <div>

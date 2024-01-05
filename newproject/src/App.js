@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import Navbar from './Component/Navbar'
 import Cart from './Component/Cart'
 import Amazon from './Component/Amazon'
+
 //import '../Style/Amazon.css'
 const App = () => {
   const [show, setShow] = useState(true);
+  
   const [cart, setCart] = useState([]);
   const [warning, setWarning] = useState(false);
   const handle = (item) => {
@@ -45,6 +47,8 @@ const App = () => {
         warning && <div className='warning'>Item is already added to
           your cart</div>
       }
+      
+
     </React.Fragment>
   )
 }
